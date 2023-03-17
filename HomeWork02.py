@@ -50,13 +50,15 @@
 не превосходящие числа N.
 """
 # # Решение
-# print()
-# n = int(input("Введите число N: "))
-# m = 2
-# while m <= n:
-#     print(m, end=" ")
-#     m *= 2
-# print()
-# print()
+import os
+os.cls
+print()
+n = int(input("Введите число N: "))
+m = 2
+while m <= n:
+    print(m, end=" ")
+    m *= 2
+print()
+print()
 
 
