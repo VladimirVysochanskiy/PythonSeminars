@@ -6,9 +6,15 @@ A = 3; B = 5 -> 243 (3⁵)
     A = 2; B = 3 -> 8
 """
 # # Решение
-def num_In_Power(a, b):
-    
-
+# print()
+# a = int(input("Введите число: "))
+# b = int(input("Введите степень: "))
+# def num_In_Power(num, pow):
+#     if pow == 1:
+#         return num
+#     return (num * num_In_Power(num, pow-1))
+# print(f"Число {a} в степени {b} = {num_In_Power(a,b)}")
+# print()
 
 
 """
@@ -19,3 +25,15 @@ def num_In_Power(a, b):
 2 2
     4 
 """
+# # Решение
+a = int(input("Введите число A: "))
+b = int(input("Введите число B: "))
+def sum_AB(num1, num2):
+    if num1 == 0:
+        return num2
+    else:
+        return sum_AB(num1 - 1, num2 + 1)
+print(f"{a} + {b} = {sum_AB(a,b)}")
+print()
+
+    
