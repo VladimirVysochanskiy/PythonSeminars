@@ -10,7 +10,17 @@
     **Вывод:** Парам пам-пам
 """
 # Решение
+def vowels(str):
+    list = "".join((filter(lambda x: x in 'аиеëоуыэюя', str)))
+    return list
 
+print()
+data = input("Введите стихотворение: ")
+data1 = list(map(lambda x: vowels(x), data.split()))
+if len(set(data1)) == 1:
+    print("Парам пам пам")
+else:
+    print("Пам парарам")
 
 
 """
