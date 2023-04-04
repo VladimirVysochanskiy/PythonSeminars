@@ -9,18 +9,18 @@
 **Ввод:** пара-ра-рам рам-пам-папам па-ра-па-да    
     **Вывод:** Парам пам-пам
 """
-# Решение
-def vowels(str):
-    list = "".join((filter(lambda x: x in 'аиеëоуыэюя', str)))
-    return list
+# # Решение
+# def vowels(str):   # Фильтр гласных букв
+#     list = "".join((filter(lambda x: x in 'аиеëоуыэюя', str)))
+#     return list
 
-print()
-data = input("Введите стихотворение: ")
-data1 = list(map(lambda x: vowels(x), data.split()))
-if len(set(data1)) == 1:
-    print("Парам пам пам")
-else:
-    print("Пам парарам")
+# print()
+# data = input("Введите стихотворение: ")
+# data1 = list(map(lambda x: vowels(x), data.split()))
+# if len(set(data1)) == 1:      # Переводим массив отфильтрованных строк в множество. Если ==1  то к-во гласных одинаково
+#     print("Парам пам пам")
+# else:
+#     print("Пам парарам")
 
 
 """
@@ -40,3 +40,10 @@ else:
 6 12 18 24 30 36
 """
 # Решение
+def print_operation_table(operation, num_rows=6, num_columns=6):
+    for i in range(1, num_rows+1):
+        for j in range(1, num_columns+1):
+            print("{:5d}".format(operation(i,j)), end="")
+        print()
+
+print_operation_table(lambda x,y: x*y)
